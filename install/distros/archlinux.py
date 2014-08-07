@@ -12,6 +12,7 @@ def main():
     os.system("pacman -S aircrack-ng") # Install Aircrack!
     os.system("pacman -S dhcp") # Install DHCP server!
     os.system("pacman -S dnsmasq") # Install DNS server!
+    os.system("pacman -S dsniff") # Install Dsniff!
     os.system("clear")
     print("Everything is installed!")
     time.sleep(1)

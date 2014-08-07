@@ -12,6 +12,7 @@ def main():
     os.system("yum install -y aircrack-ng") # Install Aircrack!
     os.system("yum install -y dhcp") # Install DHCP server!
     os.system("yum install -y dnsmasq") # Install DNS server!
+    os.sysytem("yum install -y dsniff") # Install Dsniff!
     os.system("clear")
     print("Everything is installed!")
     time.sleep(1)

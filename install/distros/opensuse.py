@@ -23,7 +23,16 @@ def dnsx64():
 
 # DNS server install 32 bits.
 def dnsx86():
-  os.system("cd downloads && ftp.opensuse.org/distribution/13.1/repo/oss/suse/i586/dnsmasq-2.65-7.1.2.i586.rpm && zypper install dnsmasq-2.65-7.1.2.i586.rpm && rm -r dnsmasq-2.65-7.1.2.i586.rpm && cd ..")
+  os.system("cd downloads && wget ftp.opensuse.org/distribution/13.1/repo/oss/suse/i586/dnsmasq-2.65-7.1.2.i586.rpm && zypper install dnsmasq-2.65-7.1.2.i586.rpm && rm -r dnsmasq-2.65-7.1.2.i586.rpm && cd ..")
+
+# Dsniff install 64 bits.
+def dsniffx64():
+  os.system("cd downloads && wget ftp5.gwdg.de/pub/opensuse/repositories/home:/derselbst/openSUSE_Tumbleweed/x86_64/dsniff-2.4_0.1-7.1.x86_64.rpm && zypper install dsniff-2.4_0.1-7.1.x86_64.rpm && rm -r dsniff-2.4_0.1-7.1.x86_64.rpm && cd ..")
+
+# Dsniff install 32 bits.
+def dsniffx86():
+  os.system("cd downloads && wget 	ftp5.gwdg.de/pub/opensuse/repositories/home:/derselbst/openSUSE_Tumbleweed/i586/dsniff-2.4_0.1-7.1.i586.rpm && zypper install dsniff-2.4_0.1-7.1.i586.rpm && rm -r dsniff-2.4_0.1-7.1.i586.rpm && cd ..")
+
 
 # Main
 def main():
@@ -39,6 +48,7 @@ def main():
       aircrackx64() # Install Aircrack!
       dhcpx64() # Install DHCP server!
       dnsx64() # Install DNS server!
+      dsniffx64() # Install Dsniff!
       os.system("clear")
       print("Everything is installed!")
       time.sleep(1)
@@ -49,6 +59,7 @@ def main():
       aircrackx86() # Install Aircrack!
       dhcpx86() # Install DHCP server!
       dnsx86() # Install DNS server!
+      dsniffx86() # Install Dsniff!
       os.system("clear")
       print("Everything is installed!")
       time.sleep(1)

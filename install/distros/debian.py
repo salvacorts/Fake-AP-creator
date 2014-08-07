@@ -12,6 +12,7 @@ def main():
     os.system("apt-get install -y aircrack-ng") # Install Aircrack-ng!
     os.system("apt-get install -y isc-dhcp-server") # Install DHCP server!
     os.system("apt-get install -y dnsmasq") # Install DNS server!
+    os.system("apt-get install -y dsniff") # Install Dsniff!
     os.system("clear")
     print("Everything is installed!")
     time.sleep(1)

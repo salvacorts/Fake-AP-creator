@@ -1,0 +1,10 @@
+##########################
+#                        #
+#    Avalible Attacks    #
+#                        #
+# 1) SslStrip + Ettercap #
+# 2) DNSpoof             #
+# 3) Dsniff suite        #
+# 4) WhatsApp Discover   #
+#                        #
+##########################
