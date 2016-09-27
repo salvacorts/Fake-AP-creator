@@ -1,19 +1,6 @@
-No Copyright!
+Fake AP Creator
+===============
 
---------------------------------------------------------------------------------
+Creator: Salva Corts
 
-Author: Salva Corts
-
-Twitter: @SalvaCorts
-
-mail: salva@highsec.es
-
-web: highsec.es
-
---------------------------------------------------------------------------------
-
-How to run it?
-
-sudo python main.py
-
---------------------------------------------------------------------------------
+3rd party software: WHATSAPP DISCOVER 1.0 by eepak Daswani (@dipudaswani)
